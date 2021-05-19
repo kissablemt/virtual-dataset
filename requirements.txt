@@ -1,0 +1,16 @@
+minexr
+boxx
+opencv-python
+beautifulsoup4
+requests
+
+laspy
+h5py
+pascal_voc_writer
+pypng
+pyyaml
+
+transforms3d
+
+pycocotools
+scikit-image
