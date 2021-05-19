@@ -9,7 +9,6 @@ log_filepath = os.path.join(output_dir, "log.txt")
 
 sys_path_to_append = [
     root_dir,
-    "D:/Anaconda3/lib",
 ]
 
 def init():
