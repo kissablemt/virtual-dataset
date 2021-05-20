@@ -81,8 +81,8 @@ def surround_scan():
         
 def main(): 
     build_scene()
-    surround_scan()
-#    B.camera_surround(bpy.data.objects['Camera'], Vector((0, 0, 0)), degree_step=1, keyframe_insert=True)
+    # surround_scan()
+    B.camera_surround(bpy.data.objects['Camera'], Vector((0, 0, 0)), degree_step=1, keyframe_insert=True)
     return 0    
 
 if __name__ == '__main__':

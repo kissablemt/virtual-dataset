@@ -56,11 +56,13 @@ def create_container() -> bpy.types.Object:
     ## Rigid Body -> Collisions -> Sensitivity
     bpy.context.object.rigid_body.collision_margin = 0
 
+    # 材质
     mat = bpy.data.materials.get("Container Material")
     if mat is None:
         # create material
         mat = bpy.data.materials.new(name="Container Material")
     
+    # 材质贴图
     mat.use_nodes = True
     img = bpy.data.images.get('UV.jpg')
     if img is None:

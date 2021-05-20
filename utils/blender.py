@@ -114,7 +114,7 @@ def rotate_on_xy_plane(camera, degree): # +:anticlockwise, -:clockwise
     cos_d = math.cos(rad)
     camera.location = (r * cos_d, r * sin_d, camera.location[2])
 
-
+# 动画demo
 def camera_surround(cam, point, degree_step=1, keyframe_insert=False):
     cam.animation_data_clear()
     i = 0
@@ -132,7 +132,7 @@ def camera_surround(cam, point, degree_step=1, keyframe_insert=False):
         cam_RTs.append(M.get_RT(cam))
     return cam_mws, cam_RTs
 
-
+# 镜头朝向，对准point
 def look_at(camera, point):
     if not isinstance(point, Vector):
         point = Vector(point)
