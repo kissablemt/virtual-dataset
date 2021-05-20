@@ -118,3 +118,14 @@ The detail is here 👉 [kissablemt/bpycv](https://github.com/kissablemt/bpycv/b
 - [seg2coco](https://github.com/kissablemt/seg2coco) 
 
 <br /><br /> 
+
+## Extra 
+
+### `scripts/arrange_sequently.py`  
+Place two objects close enough. 
+![arrange_sequently](docs/images/arrange_sequently.jpg) 
+
+![arrange_sequently2](docs/images/arrange_sequently.gif) 
+
+### `scripts/surround.py`  
+![camera surround](docs/images/surround.gif)

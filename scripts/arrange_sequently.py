@@ -21,22 +21,6 @@ modules_to_reload = [
 for m in modules_to_reload:
     importlib.reload(m)
 
-
-def create_container() -> bpy.types.Object:
-    container_object = B.import_stl(filepath=os.path.join(base.object_dir, "Container.stl"))
-    container_object.scale=(3, 3, 1.0)
-    container_object.location=(0, 0, -1)
-
-    ## Collision
-    bpy.ops.object.modifier_add(type='COLLISION')
-    
-    ## Rigid Body
-    bpy.ops.rigidbody.object_add()
-    bpy.context.object.rigid_body.type = 'PASSIVE'
-    bpy.context.object.rigid_body.collision_shape = 'MESH' 
-    bpy.context.object.rigid_body.collision_margin = 0.1
-    return container_object
-
     
 def create_target():
     B.import_stl(filepath=os.path.join(base.object_dir, "30D_831_673____PCA_TM__003_____VERST_TUERFESTSTEL________EDAG_20180824.STL"))
@@ -46,7 +30,7 @@ def create_target():
     return bpy.context.object
 
 
-#show objects that are intersecting
+# 碰撞检测
 def intersection_check(obj_list):
     #check every object for intersection with every other object
     start_time = time.time()
@@ -69,38 +53,23 @@ def intersection_check(obj_list):
     return False
 
 def get_distance(vertex1_co, vertex2_co) -> float:
-    return (vertex1_co - vertex2_co).length;
+    return (vertex1_co - vertex2_co).length
 
+
+# 获得物体对应点的距离
 def get_objects_distance(obj1, obj2) -> float:
     B.update()
     return get_distance(obj1.matrix_world @ obj1.data.vertices[0].co, obj2.matrix_world @ obj2.data.vertices[0].co)
 
-def get_nearest_distance(obj1, obj2) -> float:
-    B.update()
-    
-    vs1 = obj1.data.vertices
-    vs2 = obj2.data.vertices
-    
-    mw1 = obj1.matrix_world
-    mw2 = obj2.matrix_world
-    assert len(vs1) == len(vs2)
-    
-    nearest_distance = float("inf")
-    for i in range(len(vs1)):
-        dis = get_distance(mw1 @ vs1[i].co, mw2 @ vs2[i].co)
-        if dis < nearest_distance:
-            nearest_distance = dis
-    return nearest_distance
 
+# 在`axis`轴上靠近， 0->x, 1->y, 2->z
 def bsearch_axis(obj1, obj2, axis, flag=1):
     obj1 = B.copy(obj1)
     obj2 = B.copy(obj2)
     
     touch_dis = 0
-    untouch_dis = flag * 200
+    untouch_dis = flag * 200 ## 注意！ 这个距离应设置为3D Bounding Box的长，这里没有计算写了200作为测试
     
-    start_time = time.time()
-    cnt = 0
     while abs(untouch_dis - touch_dis) > 0.0001:
         test_dis = (touch_dis + untouch_dis) / 2
         obj2.location[axis] = test_dis
@@ -109,23 +78,20 @@ def bsearch_axis(obj1, obj2, axis, flag=1):
             touch_dis = test_dis
         else:
             untouch_dis = test_dis
-        cnt += 1
-#    print("cnt: {}\ndis: {}\n".format(cnt, untouch_dis))
-#    print("time: ", time.time() - start_time)
     
     B.remove(obj1)
     B.remove(obj2)    
     return untouch_dis
 
+
 def bsearch_location(obj1_, obj2_):
     obj1 = B.copy(obj1_)
     obj2 = B.copy(obj2_)
     
+    # 先在y轴上靠近
     obj2.location[1] = bsearch_axis(obj1, obj2, 1, -1)
     
-    start_time = time.time()
-    cnt = 0
-    ## 注意！ [10, -5, 1]是人为设置的，实际上第一个值应设置为Bounding Box的某边长度，然后依次除以-2
+    ## 注意！ [10, -5, 1]是人为设置的，实际上第一个值应设置为3D Bounding Box的某边长度，然后依次除以-2
     for step in [10, -5, 1]:
         pre_dis = float("inf")
         while True:
@@ -134,36 +100,12 @@ def bsearch_location(obj1_, obj2_):
                 break
             obj2.location[0] += step
             obj2.location[1] = bsearch_axis(obj1, obj2, 1, -1)
-            obj2.keyframe_insert(data_path="location", frame=cnt + 1)
             pre_dis = dis
-            cnt += 1
-
-#    print(" cnt: {}\n time: {}".format(cnt, time.time() - start_time))
     location = obj2.location
     
     B.remove(obj1)
     B.remove(obj2)
     return location
-
-
-def get_objects_shortest_distance(obj1, obj2):
-    '''
-    Find the shortest distance between obj1 and obj2
-    '''
-    
-    start_time = time.time()
-    kd = KDTree(len(obj2.data.vertices))
-    for i, v in enumerate(obj2.data.vertices):
-        kd.insert(obj2.matrix_world @ v.co, i)
-    kd.balance()
-    
-    ans = (obj1.data.vertices[0], 0, float('inf')) ## (Vector, index, distance)
-    for v in obj1.data.vertices:
-        co, index, dist = kd.find(obj1.matrix_world @ v.co)
-        if dist < ans[2]:
-            ans = (co, index, dist)
-#    print(" time: {}".format(time.time() - start_time))
-    return ans  
 
 
 def seq_test():
@@ -185,7 +127,6 @@ def seq_test():
 
 def main():
     B.clean()
-#    container = create_container()
     seq_test()
     return 0
 

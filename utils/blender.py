@@ -115,7 +115,7 @@ def rotate_on_xy_plane(camera, degree): # +:anticlockwise, -:clockwise
     camera.location = (r * cos_d, r * sin_d, camera.location[2])
 
 
-def orbit_around(cam, point, degree_step=1, keyframe_insert=False):
+def camera_surround(cam, point, degree_step=1, keyframe_insert=False):
     cam.animation_data_clear()
     i = 0
     cam_mws = []
