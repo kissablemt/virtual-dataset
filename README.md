@@ -114,7 +114,7 @@ The detail is here 👉 [kissablemt/bpycv](https://github.com/kissablemt/bpycv/b
 
 <br /><br /> 
 
-### 4. Convert Segmentation Images to COCO Annotation
+### 4. Convert Segmentation Images to COCO Annotation 
 - [seg2coco](https://github.com/kissablemt/seg2coco) 
 
 <br /><br /> 
@@ -122,7 +122,10 @@ The detail is here 👉 [kissablemt/bpycv](https://github.com/kissablemt/bpycv/b
 ## Extra 
 
 ### `scripts/arrange_sequently.py`  
-Place two objects close enough. 
+Place two objects close enough.  
+
+Reference from [check intersection](https://blender.stackexchange.com/questions/9073/how-to-check-if-two-meshes-intersect-in-python) 
+
 ![arrange_sequently](docs/images/arrange_sequently.jpg) 
 
 ![arrange_sequently2](docs/images/arrange_sequently.gif) 
