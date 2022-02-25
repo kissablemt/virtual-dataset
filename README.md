@@ -143,3 +143,6 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 
 ## Result
 
+- UV
+![](docs/images/driller.png)
+
