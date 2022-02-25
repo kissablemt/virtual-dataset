@@ -127,12 +127,19 @@ Place two objects close enough.
 
 Reference from [check intersection](https://blender.stackexchange.com/questions/9073/how-to-check-if-two-meshes-intersect-in-python) 
 
-![arrange_sequently](docs/images/arrange_sequently.jpg) 
+<img src="docs/images/arrange_sequently.jpg" width=400>
 
-![arrange_sequently2](docs/images/arrange_sequently.gif) 
+<img src="docs/images/arrange_sequently.gif" width=400>
+
+<!-- ![arrange_sequently](docs/images/arrange_sequently.jpg) 
+
+![arrange_sequently2](docs/images/arrange_sequently.gif)  -->
 
 ### `scripts/surround.py`  
-![camera surround](docs/images/surround.gif)
+
+<!-- ![camera surround](docs/images/surround.gif) -->
+
+<img src="docs/images/surround.gif" width=400>
 
 ---
 
