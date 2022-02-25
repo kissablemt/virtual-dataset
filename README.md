@@ -147,26 +147,26 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 ## Result
 
 - Build scene  
-<img src="docs/images/mole.gif" width=600>  
+<img src="docs/images/mole.gif" width=400>  
 
 - Generate point cloud  
-<img src="docs/images/blainder.gif" width=600>  
+<img src="docs/images/blainder.gif" width=400>  
 
 - Show in CloudCompare  
-<img src="docs/images/point_cloud.gif" width=600>  
+<img src="docs/images/point_cloud.gif" width=400>  
 
 - UV  
-<img src="docs/images/driller.png" width=600>  
+<img src="docs/images/driller.png" width=800>  
 
 - Stack    
-<img src="docs/images/stack.png" width=600>  
+<img src="docs/images/stack.png" width=800>  
 
 - Segmentation  
-<img src="docs/images/2022-02-25-17-33-59.png" width=600>  
+<img src="docs/images/2022-02-25-17-33-59.png" width=800>  
 
 - Segmentation, RGB, Depth  
-<img src="docs/images/2022-02-25-17-27-30.png" width=600>  
+<img src="docs/images/2022-02-25-17-27-30.png" width=800>  
 
 - Segmentation Seperate  
-<img src="docs/images/2022-02-25-17-27-57.png" width=600>
+<img src="docs/images/2022-02-25-17-27-57.png" width=800>
 
