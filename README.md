@@ -1,7 +1,7 @@
 # Virtual Dataset via Blender 
 
 - Test with Mask R-CNN  
-<img src="docs/images/test.gif" width=600>  
+<img src="docs/images/test.gif" width=400>  
 
 ---  
 
@@ -128,9 +128,9 @@ Place two objects close enough.
 
 Reference from [check intersection](https://blender.stackexchange.com/questions/9073/how-to-check-if-two-meshes-intersect-in-python) 
 
-<img src="docs/images/arrange_sequently.jpg" width=600>
+<img src="docs/images/arrange_sequently.jpg" width=400>
 
-<img src="docs/images/arrange_sequently.gif" width=600>
+<img src="docs/images/arrange_sequently.gif" width=400>
 
 <!-- ![arrange_sequently](docs/images/arrange_sequently.jpg) 
 
@@ -140,7 +140,7 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 
 <!-- ![camera surround](docs/images/surround.gif) -->
 
-<img src="docs/images/surround.gif" width=600>
+<img src="docs/images/surround.gif" width=400>
 
 ---
 
