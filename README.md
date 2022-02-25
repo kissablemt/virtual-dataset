@@ -1,5 +1,7 @@
 # Virtual Dataset via Blender 
 
+- Test with Mask R-CNN  
+![](docs/images/test.gif)  
 ---  
 
 ## Installation 
@@ -152,27 +154,17 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 - Show in CloudCompare  
 ![](docs/images/point_cloud.gif)  
 
-<br />
-
 - UV  
 ![](docs/images/driller.png)
-
-<br />
 
 - Stack    
 ![](docs/images/stack.png)
 
-<br />
-
 - Segmentation  
 ![](docs/images/2022-02-25-17-33-59.png)
 
-<br />
-
 - Segmentation, RGB, Depth  
 ![](docs/images/2022-02-25-17-27-30.png)
-
-<br />
 
 - Segmentation Seperate  
 ![](docs/images/2022-02-25-17-27-57.png)
