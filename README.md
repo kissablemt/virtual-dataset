@@ -1,7 +1,8 @@
 # Virtual Dataset via Blender 
 
 - Test with Mask R-CNN  
-![](docs/images/test.gif)  
+<img src="docs/images/test.gif" width=400>  
+
 ---  
 
 ## Installation 
