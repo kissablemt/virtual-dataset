@@ -1,7 +1,7 @@
 # Virtual Dataset via Blender 
 
 - Test with Mask R-CNN  
-<img src="docs/images/test.gif" width=400>  
+<img src="docs/images/test.gif" width=450>  
 
 ---  
 
@@ -128,9 +128,9 @@ Place two objects close enough.
 
 Reference from [check intersection](https://blender.stackexchange.com/questions/9073/how-to-check-if-two-meshes-intersect-in-python) 
 
-<img src="docs/images/arrange_sequently.jpg" width=400>
+<img src="docs/images/arrange_sequently.jpg" width=450>
 
-<img src="docs/images/arrange_sequently.gif" width=400>
+<img src="docs/images/arrange_sequently.gif" width=450>
 
 <!-- ![arrange_sequently](docs/images/arrange_sequently.jpg) 
 
@@ -140,20 +140,20 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 
 <!-- ![camera surround](docs/images/surround.gif) -->
 
-<img src="docs/images/surround.gif" width=400>
+<img src="docs/images/surround.gif" width=450>
 
 ---
 
 ## Result
 
 - Build scene  
-<img src="docs/images/mole.gif" width=400>  
+<img src="docs/images/mole.gif" width=450>  
 
 - Generate point cloud  
-<img src="docs/images/blainder.gif" width=400>  
+<img src="docs/images/blainder.gif" width=450>  
 
 - Show in CloudCompare  
-<img src="docs/images/point_cloud.gif" width=400>  
+<img src="docs/images/point_cloud.gif" width=450>  
 
 - UV  
 <img src="docs/images/driller.png" width=800>  
