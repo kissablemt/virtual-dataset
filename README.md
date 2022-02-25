@@ -162,14 +162,14 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 <br />
 
 - Segmentation
-![](2022-02-25-17-33-59.png)
+![](docs/images/2022-02-25-17-33-59.png)
 
 <br />
 
 - Segmentation, RGB, Depth
-![](2022-02-25-17-27-30.png)
+![](docs/images/2022-02-25-17-27-30.png)
 
 <br />
 
 - Segmentation Seperate
-![](2022-02-25-17-27-57.png)
+![](docs/images/2022-02-25-17-27-57.png)
