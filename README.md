@@ -34,7 +34,6 @@
 
 *WARNING*:  make sure you are using Blender's Python to install requirements.
 
-<br />
 
 ## Add-ons Usage 
 
@@ -58,8 +57,6 @@ The detail is here 👉 [kissablemt/blainder-range-scanner](https://github.com/k
 - ### bpycv 
 The detail is here 👉 [kissablemt/bpycv](https://github.com/kissablemt/bpycv/blob/master/README.md) 
 
-
-<br /><br />  
 
 ---
 
@@ -109,8 +106,6 @@ The detail is here 👉 [kissablemt/bpycv](https://github.com/kissablemt/bpycv/b
     Parameter settings need to view [Blender-Molecular-Script](https://github.com/kissablemt/Blender-Molecular-Script) source code or view it in the GUI interface.
 
 
-<br /><br /> 
-
 ### 3. Generate Dataset
 `scripts/generate_dataset.py` contains the depth camera simulation and rendering. 
 
@@ -118,12 +113,10 @@ The detail is here 👉 [kissablemt/bpycv](https://github.com/kissablemt/bpycv/b
 
 - [bpycv](https://github.com/kissablemt/bpycv) 
 
-<br /><br /> 
 
 ### 4. Convert Segmentation Images to COCO Annotation 
 - [seg2coco](https://github.com/kissablemt/seg2coco) 
-
-<br /><br /> 
+ 
 
 ---
 
