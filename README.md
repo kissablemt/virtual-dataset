@@ -167,4 +167,5 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 ![](docs/images/2022-02-25-17-27-30.png)
 
 - Segmentation Seperate  
-![](docs/images/2022-02-25-17-27-57.png)
+<img src="docs/images/2022-02-25-17-27-57.png" width=800>
+
