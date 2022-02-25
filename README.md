@@ -1,6 +1,6 @@
 # Virtual Dataset via Blender 
 
----
+---  
 
 ## Installation 
 
@@ -143,11 +143,14 @@ Reference from [check intersection](https://blender.stackexchange.com/questions/
 
 ## Result
 
-- videos:
-  - https://github.com/kissablemt/virtual-dataset/blob/main/docs/videos/blainder.mp4
-  - https://github.com/kissablemt/virtual-dataset/blob/main/docs/videos/material.mp4
-  - https://github.com/kissablemt/virtual-dataset/blob/main/docs/videos/mole.mp4
-  - https://github.com/kissablemt/virtual-dataset/blob/main/docs/videos/point_cloud.mp4
+- Build scene  
+![](docs/images/mole.gif)  
+
+- Generate point cloud  
+![](docs/images/blainder.gif)  
+
+- Show in CloudCompare  
+![](docs/images/point_cloud.gif)  
 
 <br />
 
